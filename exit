@@ -1,0 +1,17 @@
+[33mcommit 2cd56ffb51ae160302c96b8987626e2cb400438d[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m)[m
+Author: Jhonan96 <j.a.h.f.2000@gmail.com>
+Date:   Tue Oct 12 16:34:43 2021 -0500
+
+    busqueda de post por catagoria y clasificacion por tag asignado
+
+[33mcommit f32a0400b1def6bcec671cacbf92e1ed0b338874[m
+Author: Jhonan96 <j.a.h.f.2000@gmail.com>
+Date:   Tue Oct 12 12:17:54 2021 -0500
+
+    Posts en la pagina inicial con sus detalles
+
+[33mcommit 6b7639debde3b6fd72979d004826d0ec81eec76a[m
+Author: Jhonan96 <j.a.h.f.2000@gmail.com>
+Date:   Tue Oct 12 08:42:15 2021 -0500
+
+    Migraciones lista con datos de prueba y usuario SuperAdmin
