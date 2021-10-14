@@ -26,12 +26,15 @@
                         </td>
                         
                         <td width="10px">
-                            <form action="{{route('admin.posts.destroy',$post)}}" method="POST">
-                                @csrf
-                                @method('delete')
+                            @can('admin.posts.destroy')
+                                <form action="{{route('admin.posts.destroy',$post)}}" method="POST">
+                                    @csrf
+                                    @method('delete')
 
-                                <button type="submit" class="btn btn-danger btn-sm">Eliminar</button>
-                            </form>
+                                    <button type="submit" class="btn btn-danger btn-sm">Eliminar</button>
+                                </form>
+                            @endcan
+                            
                         </td>
                         
                     </tr>

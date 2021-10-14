@@ -4,7 +4,7 @@
         <h1 class="text-4xl font-bold text-gray-600">
             {{$post->name}}
         </h1>
-        <div class="text-lg text-gray-500 mb-2">
+        <div class="text-justify text-lg text-gray-500 mb-2">
             {!!$post->extract!!}
         </div>
 
@@ -20,7 +20,7 @@
                     @endif
                 </figure>
 
-                <div class="text-base text-gray-500 mt-4">
+                <div class="text-justify text-base text-gray-500 mt-4">
                     {!!$post->body!!}
                 </div>
             </div>

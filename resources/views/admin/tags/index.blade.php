@@ -4,7 +4,11 @@
 
 @section('content_header')
 
-    <a href="{{route('admin.tags.create')}}" class="btn btn-secondary btn-sm float-right ">Nueva Etiqueta</a>
+    @can('admin.tags.create')
+        <a href="{{route('admin.tags.create')}}" class="btn btn-secondary btn-sm float-right ">Nueva Etiqueta</a>
+
+    @endcan
+
 
 
     <h1>Listado de Etiquetas</h1>
@@ -41,18 +45,25 @@
                     <tr>
                         <td>{{$tag->id}}</td>
                         <td>{{$tag->name}}</td>
+
                         <td width="10px">
-                            <a class="btn btn-primary btn-sm" href="{{route('admin.tags.edit', $tag)}}">Editar</a>
+                            @can('admin.tags.edit')
+                                <a class="btn btn-primary btn-sm" href="{{route('admin.tags.edit', $tag)}}">Editar</a>
+
+                            @endcan
                         </td>
 
 
                         <td width="10px">
-                            <form action="{{route('admin.tags.destroy',$tag)}}" method="POST">
-                                @csrf
-                                @method('delete')
+                            @can('admin.tags.destroy')
+                                <form action="{{route('admin.tags.destroy',$tag)}}" method="POST">
+                                    @csrf
+                                    @method('delete')
 
-                                <button type="submit" class="btn btn-danger btn-sm">Eliminar</button>
-                            </form>
+                                    <button type="submit" class="btn btn-danger btn-sm">Eliminar</button>
+                                </form>
+                            @endcan
+                            
                         </td>
                     </tr>
                 @endforeach
