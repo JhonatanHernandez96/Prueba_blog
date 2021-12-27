@@ -18,8 +18,8 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
         // \App\Models\User::factory(10)->create();
-        Storage::deleteDirectory('posts');
-        Storage::makeDirectory('posts');
+        Storage::deleteDirectory('public/posts');
+        Storage::makeDirectory('public/posts');
 
         $this->call(RoleSeeder::class);
 
